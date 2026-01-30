@@ -44,7 +44,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "y.e.no_sleep_in_kmp"
-            packageVersion = "1.0.0"
+            packageVersion = "1.0.1"
         }
     }
 }
