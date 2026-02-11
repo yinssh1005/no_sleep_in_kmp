@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
-    alias(libs.plugins.ksp)
 }
 
 kotlin {
@@ -27,14 +26,8 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
-            implementation(libs.androidx.room.runtime)
-            implementation(libs.sqlite.bundled)
         }
     }
-}
-
-dependencies {
-    add("kspJvm", libs.androidx.room.compiler)
 }
 
 compose.desktop {

@@ -32,27 +32,7 @@ enum class KeyboardMode(val label: String) {
 @Composable
 fun App() {
     MaterialTheme {
-        var currentTab by remember { mutableStateOf(0) }
-        
-        Column {
-            TabRow(selectedTabIndex = currentTab) {
-                Tab(
-                    selected = currentTab == 0,
-                    onClick = { currentTab = 0 },
-                    text = { Text("模拟器") }
-                )
-                Tab(
-                    selected = currentTab == 1,
-                    onClick = { currentTab = 1 },
-                    text = { Text("笔记") }
-                )
-            }
-            
-            when (currentTab) {
-                0 -> SimulatorTab()
-                1 -> NotesTab()
-            }
-        }
+        SimulatorTab()
     }
 }
 
@@ -209,8 +189,3 @@ fun SimulatorTab() {
             }
         }
     }
-
-    @Composable
-    fun NotesTab() {
-    MainActivity()
-}
